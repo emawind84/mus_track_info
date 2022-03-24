@@ -1,0 +1,37 @@
+#library "DOOM2MUSIC"
+#include "zcommon.acs"
+#include "muscommon.acs"
+
+str mti_Chex3MusicNames[15][2] = {
+  { "Landing Zone", "Andrew Benon" },
+  { "Storage Facility", "Andrew Benon" },
+  { "Laboratory", "Andrew Benon" },
+  { "Arboretum", "Andrew Benon" },
+  { "Caverns of Bazoik", "Andrew Benon" },
+  
+  { "Spaceport", "Andrew Benon" },
+  { "Cinema", "Andrew Benon" },
+  { "Chex Museum", "Andrew Benon" },
+  { "City Streets", "Andrew Benon" },
+  { "Sewer System", "Andrew Benon" },
+  
+  { "Central Command", "Andrew Benon" },
+  { "Confidence", "Sabrina DiDuro" },
+  { "Villa Chex", "Andrew Benon" },
+  { "Chancer", "Sabrina DiDuro" },
+  { "CQ Final", "Sabrina DiDuro" },
+  
+};
+
+script "mti_Chex3PrintTrackName" ENTER
+{
+	if (CheckInventory("mti_ischex3"))
+	{
+		Log(s:"ISCHEX3");
+		int levelnum = GetLevelInfo(LEVELINFO_LEVELNUM);
+		if (levelnum > 0)
+		{
+			print_track(mti_Chex3MusicNames[levelnum-1][0], mti_Chex3MusicNames[levelnum-1][1]);
+		}
+	}
+}

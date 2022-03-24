@@ -1,0 +1,96 @@
+#library "DOOMMUSIC"
+#include "zcommon.acs"
+#include "muscommon.acs"
+
+str mti_DoomMusicNames[60][2] = {
+	// e1
+	{"At Doom's Gate","Bobby Prince"},
+	{"The Imp's Song","Bobby Prince"},
+	{"Dark Halls","Bobby Prince"},
+	{"Kitchen Ace (And Taking Names)","Bobby Prince"},
+	{"Suspense","Bobby Prince"},
+	{"On the Hunt","Bobby Prince"},
+	{"Demons on the Prey","Bobby Prince"},
+	{"Sign of Evil","Bobby Prince"},
+	{"Hiding the Secrets","Bobby Prince"},
+	{"",""},
+	// e2
+	{"I Sawed the Demons","Bobby Prince"},
+	{"The Demons from Adrian's Pen","Bobby Prince"},
+	{"Intermission from DOOM","Bobby Prince"},
+	{"They're Going to Get You","Bobby Prince"},
+	{"Demons on the Prey","Bobby Prince"},
+	{"Sinister","Bobby Prince"},
+	{"Waltz of the Demons","Bobby Prince"},
+	{"Nobody Told Me About id","Bobby Prince"},
+	{"Untitled","Bobby Prince"},
+	{"",""},
+	// e3
+	{"Untitled","Bobby Prince"},
+	{"Donna to the Rescue","Bobby Prince"},
+	{"Deep Into the Code","Bobby Prince"},
+	{"Sign of Evil","Bobby Prince"},
+	{"Demons on the Prey","Bobby Prince"},
+	{"On the Hunt","Bobby Prince"},
+	{"Waltz of the Demons","Bobby Prince"},
+	{"Facing the Spider","Bobby Prince"},
+	{"Hiding the Secrets","Bobby Prince"},
+	{"",""},
+	// e4
+	{"Sign of Evil","Bobby Prince"},
+	{"Donna to the Rescue","Bobby Prince"},
+	{"Deep Into the Code","Bobby Prince"},
+	{"Suspense","Bobby Prince"},
+	{"Waltz of the Demons","Bobby Prince"},
+	{"They're Going to Get You","Bobby Prince"},
+	{"Sinister","Bobby Prince"},
+	{"Demons on the Prey","Bobby Prince"},
+	{"Hiding the Secrets","Bobby Prince"},
+	{"",""},
+	// e5 midi
+	{"Hate Machine", "James Paddock (Jimmy)"},
+	{"You Ain't the Boss o' Me", "James Paddock (Jimmy)"},
+	{"Quell the Beast", "James Paddock (Jimmy)"},
+	{"Riot Squadron", "James Paddock (Jimmy)"},
+	{"Alice", "James Paddock (Jimmy)"},
+	{"Besieged City", "James Paddock (Jimmy)"},
+	{"Watching You", "James Paddock (Jimmy)"},
+	{"Easel", "James Paddock (Jimmy)"},
+	{"Adrenaline in the Blood", "James Paddock (Jimmy)"},
+	{"",""},
+	// e5 mp3
+	{"Romero One Mind Any Weapon", "Brian Patrick Carroll (Buckethead)"},
+	{"13th Floor", "Brian Patrick Carroll (Buckethead)"},
+	{"Buildor 2", "Brian Patrick Carroll (Buckethead)"},
+	{"The Patrolman", "Brian Patrick Carroll (Buckethead)"},
+	{"Cold Frost part 6", "Brian Patrick Carroll (Buckethead)"},
+	{"Melting Man part 2", "Brian Patrick Carroll (Buckethead)"},
+	{"Far 5", "Brian Patrick Carroll (Buckethead)"},
+	{"Poseidon 4-6", "Brian Patrick Carroll (Buckethead)"},
+	{"Fastpass", "Brian Patrick Carroll (Buckethead)"},
+	{"",""},
+};
+
+script "mti_PrintLevelInfo" ENTER
+{
+	str mapname = StrParam(n:PRINTNAME_LEVEL);
+	Log(s:"LEVEL: ", d:find_level_num());
+	Print(s:"MAPNAME: ", s:mapname);
+}
+
+script "mti_DoomPrintTrackName" ENTER
+{
+	if (CheckInventory("mti_isfinaldoom"))
+	{
+		int levelnum = GetLevelInfo(LEVELINFO_LEVELNUM);
+		int sigilmusic = GetCVar("mti_sigil_music");
+		if (levelnum >= 41 && sigilmusic == 1)
+		{
+			levelnum += 10;
+		}
+		if (levelnum > 0)
+		{
+			print_track(mti_DoomMusicNames[levelnum-1][0], mti_DoomMusicNames[levelnum-1][1]);
+		}
+	}
+}

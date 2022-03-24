@@ -1,0 +1,97 @@
+#library "DOOM2MUSIC"
+#include "zcommon.acs"
+#include "muscommon.acs"
+
+str mti_HexddMusicNames[60][2] = {
+	// hub 1
+	{ "Winnowing Hall", "Kevin Schilder" },
+	{ "Jach", "Kevin Schilder" },
+	{ "Simon", "Kevin Schilder" },
+	{ "Wutzit", "Kevin Schilder" },
+	{ "Falcon", "Kevin Schilder" },
+	{ "Level", "Kevin Schilder" },
+	{},  // 7
+
+	// hub 2
+	{ "Swamp", "Kevin Schilder" },
+	{ "Deep", "Kevin Schilder" },
+	{ "Fubas", "Kevin Schilder" },
+	{ "Grove", "Kevin Schilder" },
+	{ "Fortress", "Kevin Schilder" },
+	{ "Crypt", "Kevin Schilder" },
+	
+	{},  // 14
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},  // 20
+	
+	// hub 4
+	{ "Fooja", "Kevin Schilder" },
+	{ "Sixate", "Kevin Schilder" },
+	{ "Wobaby", "Kevin Schilder" },
+	{ "Crypt", "Kevin Schilder" },
+	{ "Fantasy", "Kevin Schilder" },
+	{ "Blech", "Kevin Schilder" },  // 26
+	
+	// hub 3
+	{ "Void", "Kevin Schilder" },
+	{ "Chapel 1", "Kevin Schilder" },
+	{},  // 29
+	{ "Chapel 3", "Kevin Schilder" },
+	{ "Chapel 4", "Kevin Schilder" },
+	{ "Chippy", "Kevin Schilder" },
+	
+	// dd hub 4
+	{ "Grove", "Kevin Schilder" },  // 33
+	{ "Fort", "Kevin Schilder" },
+	{ "Swamp", "Kevin Schilder" },
+	{ "Wobaby", "Kevin Schilder" },
+	{ "Blech", "Kevin Schilder" },
+	{ "Falcon", "Kevin Schilder" },  // 38 end hub 4
+	
+	{},
+	{},  // 40
+	
+	// dd hub 1
+	{ "Winnowing Hall", "Kevin Schilder" },
+	{ "Jach", "Kevin Schilder" },
+	{ "Void", "Kevin Schilder" },
+	{ "Deep", "Kevin Schilder" },
+	{ "Fubas", "Kevin Schilder" },
+	{ "Sixate", "Kevin Schilder" },
+	{ "Chapel 1", "Kevin Schilder" },  // 47
+	
+	// dd hub 2
+	{ "Bones", "Kevin Schilder" },
+	{ "Wutzitr", "Kevin Schilder" },
+	{ "Chapel 2", "Kevin Schilder" },
+	{ "Octo", "Kevin Schilder" },
+	{ "Stalk", "Kevin Schilder" },
+	{ "Falcon", "Kevin Schilder" },  // 53
+	
+	// dd hub 3
+	{ "Chapel 3", "Kevin Schilder" },
+	{ "Perc", "Kevin Schilder" },
+	{ "Rithmr", "Kevin Schilder" },
+	{ "Fooja", "Kevin Schilder" },
+	{ "Crypt", "Kevin Schilder" },
+	{ "Simon", "Kevin Schilder" },
+	{ "Crucible 2", "Kevin Schilder" },
+	
+	
+};
+
+script "mti_HexddPrintTrackName" ENTER
+{
+	if (CheckInventory("mti_ishexendd"))
+	{
+		int levelnum = GetLevelInfo(LEVELINFO_LEVELNUM);
+		if (levelnum > 0)
+		{
+			print_track(mti_HexddMusicNames[levelnum-1][0], mti_HexddMusicNames[levelnum-1][1]);
+		}
+	}
+}

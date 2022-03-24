@@ -1,0 +1,53 @@
+#library "DOOM2MUSIC"
+#include "zcommon.acs"
+#include "muscommon.acs"
+
+str mti_StrifeMusicNames[62][2] = {	
+
+  { "Action", "Morey Goldstein" },
+  { "Tavern", "Morey Goldstein" },
+  { "Danger", "Morey Goldstein" },
+  { "Fast", "Morey Goldstein" },
+  { "Intro", "Morey Goldstein" },
+  { "Darker", "Morey Goldstein" },
+  { "Strike", "Morey Goldstein" },
+  { "Slide", "Morey Goldstein" },
+  { "Tribal", "Morey Goldstein" },
+  { "March", "Morey Goldstein" },
+  
+  { "Danger", "Morey Goldstein" },
+  { "Mood", "Morey Goldstein" },
+  { "Castle", "Morey Goldstein" },
+  { "Darker", "Morey Goldstein" },
+  { "Action", "Morey Goldstein" },
+  { "Fight", "Morey Goldstein" },
+  { "Suspense", "Morey Goldstein" },
+  { "Slide", "Morey Goldstein" },
+  { "Strike", "Morey Goldstein" },
+  { "Dark", "Morey Goldstein" },
+ 
+  { "Tech", "Morey Goldstein" },
+  { "Slide", "Morey Goldstein" },
+  { "Drone", "Morey Goldstein" },
+  { "Panther", "Morey Goldstein" },
+  { "Sad", "Morey Goldstein" },
+  { "Industry", "Morey Goldstein" },
+  { "Tech", "Morey Goldstein" },
+  { "Action", "Morey Goldstein" },
+  { "Industry", "Morey Goldstein" },
+  { "Drone", "Morey Goldstein" },
+  
+  { "Fight", "Morey Goldstein" },
+};
+
+script "mti_StrifePrintTrackName" ENTER
+{
+	if (CheckInventory("mti_isstrife"))
+	{
+		int levelnum = find_level_num();
+		if (levelnum > 0)
+		{
+			print_track(mti_StrifeMusicNames[levelnum-1][0], mti_StrifeMusicNames[levelnum-1][1]);
+		}
+	}
+}

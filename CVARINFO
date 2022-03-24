@@ -1,0 +1,10 @@
+user int mti_sigil_music = 0;
+user int mti_plutonia_music = 0;
+user int mti_harmony_music = 0;
+user int mti_hexen_music = 0;
+user int mti_heretic_music = 0;
+user int mti_chex3_music = 0;
+user int mti_tnt_music = 0;
+user int mti_doom_music = 0;
+user int mti_doom2_music = 0;
+user int mti_strife_music = 0;

@@ -1,0 +1,53 @@
+#library "DOOM2MUSIC"
+#include "zcommon.acs"
+#include "muscommon.acs"
+
+str mti_TntMusicNames[32][2] = {
+  { "Sadistic", "L.A. Sieben" },
+  { "Smells Like Burning Corpse	", "L.A. Sieben" },
+  { "Message for the Archvile", "Robert Prince" },
+  { "Death's Bells", "L.A. Sieben" },
+  { "More", "Tom Mustaine" },
+  { "Agony Rhapsody", "L.A. Sieben" },
+  { "Soldier of Chaos", "Jonathan El-Bizri" },
+  { "Into the Beast's Belly", "L.A. Sieben" },
+  { "Sadistic", "L.A. Sieben" },
+  { "Infinite", "Tom Mustaine" },
+  
+  { "Let's Kill at Will", "Jonathan El-Bizri" },
+  { "The Dave D. Taylor Blues", "Robert Prince" },
+  { "Death's Bells", "L.A. Sieben" },
+  { "Cold Subtleness", "Jonathan El-Bizri" },
+  { "Smells Like Burning Corpse", "L.A. Sieben" },
+  { "Blood Jungle", "Jonathan El-Bizri" },
+  { "More", "Tom Mustaine" },
+  { "Infinite", "Tom Mustaine" },
+  { "Countdown to Death", "Robert Prince" },
+  { "Horizon", "Tom Mustaine" },
+  
+  { "Into Sandy's City", "Robert Prince" },
+  { "AimShootKill", "Tom Mustaine" },
+  { "Bye bye American Pie", "Robert Prince" },
+  { "Between Levels", "Robert Prince" },
+  { "DOOM", "Robert Prince" },
+  { "Blood Jungle", "Jonathan El-Bizri" },
+  { "Into the Beast's Belly", "L.A. Sieben" },
+  { "AimShootKill", "Tom Mustaine" },
+  { "Death's Bells", "L.A. Sieben" },
+  { "Into the Beast's Belly", "L.A. Sieben" },
+  
+  { "Legion of the Lost", "L.A. Sieben"},
+  
+};
+
+script "mti_TntPrintTrackName" ENTER
+{
+	if (CheckInventory("mti_istnt"))
+	{
+		int levelnum = GetLevelInfo(LEVELINFO_LEVELNUM);
+		if (levelnum > 0)
+		{
+			print_track(mti_TntMusicNames[levelnum-1][0], mti_TntMusicNames[levelnum-1][1]);
+		}
+	}
+}

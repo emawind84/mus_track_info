@@ -1,0 +1,106 @@
+#library "DOOM2MUSIC"
+#include "zcommon.acs"
+#include "muscommon.acs"
+
+str mti_PlutoniaMusicNames[32][2] = {
+  { "The Imp's Song", "Bobby Prince" },
+  { "Dark Halls", "Bobby Prince" },
+  { "On the Hunt", "Bobby Prince" },
+  { "Kitchen Ace (and Taking Names)", "Bobby Prince" },
+  { "Hiding the Secrets", "Bobby Prince" },
+  
+  { "Sign of Evil", "Bobby Prince" },
+  { "I Sawed the Demons", "Bobby Prince" },
+  { "The Demons from Adrian's Pen", "Bobby Prince" },
+  { "Deep into the Code", "Bobby Prince" },
+  { "Demons on the Prey", "Bobby Prince" },
+  
+  { "Sweet Little Dead Bunny", "Bobby Prince" },
+  { "Facing the Spider", "Bobby Prince" },
+  { "Donna to the Rescue", "Bobby Prince" },
+  { "Nobody told me about id", "Bobby Prince" },
+  { "Waltz of the Demons", "Bobby Prince" },
+  
+  { "Untitled", "Bobby Prince" },
+  { "At Doom's Gate", "Bobby Prince" },
+  { "Demons on the Prey", "Bobby Prince" },
+  { "Suspense", "Bobby Prince" },
+  { "Message for the Archvile", "Robert Prince" },
+  
+  { "Untitled", "Bobby Prince" },
+  { "The Dave D. Taylor Blues", "Robert Prince" },
+  { "Bye bye American Pie", "Robert Prince" },
+  { "In the Dark", "Robert Prince" },
+  { "Adrian's Asleep", "Robert Prince" },
+  
+  { "Message for the Archvile", "Robert Prince" },
+  { "I Sawed the Demons", "Bobby Prince" },
+  { "The Demons from Adrian's Pen", "Bobby Prince" },
+  { "At Doom's Gate", "Bobby Prince" },
+  { "The End of DOOM", "Bobby Prince" },
+  
+  { "Sign of Evil", "Bobby Prince" },
+  { "Nobody told me about id", "Bobby Prince" },
+};
+
+str mti_PlutoniaMidiPackMusicNames[32][2] = {
+  { "Death Mask", "Lippeth" },
+  { "Trigger", "Mr. Freeze, Brendan Bradley (Bucket)" },
+  { "Jade Empire", "Stuart Rynn (stewboy)" },
+  { "Claustrophobia", "Vladislav Baymurzin (ClumsyDoomer)" },
+  { "Sepulchral", "Shin Godzilla" },
+  
+  { "Plusfort", "Brendan Bradley (Bucket)" },
+  { "Seasons of Insanity", "James Paddock (Jimmy)" },
+  { "Tower of Fire", "James Paddock (Jimmy)" },
+  { "Plutocrat", "Brendan Bradley (Bucket)" },
+  { "Denied", "Adam Post (Doomkid)" },
+  
+  { "Always Watching", "Lippeth" },
+  { "Blood Rush", "Tristan Clark" },
+  { "untitled", "Mr. Freeze" },
+  { "Plugged In", "Brendan Bradley (Bucket)" },
+  { "Plummeting", "Brendan Bradley (Bucket)" },
+  
+  { "Run 'Em, Gun 'Em, Kill 'Em", "James Paddock (Jimmy)" },
+  { "Massacre Machine", "Lippeth" },
+  { "Fire Hive", "James Paddock (Jimmy)" },
+  { "Lost in Place", "Lippeth" },
+  { "Death's Toll", "Stuart Rynn (stewboy)" },
+  
+  { "Ascension of Satan", "Viscra Maelstrom" },
+  { "Stealth Mode", "James Paddock (Jimmy)" },
+  { "Plug Ugly", "Brendan Bradley (Bucket)" },
+  { "Pluvious", "Brendan Bradley (Bucket)" },
+  { "Contemplate", "Shin Godzilla" },
+  
+  { "HOSILFU", "Zan-zan-zawa-veia" },
+  { "Infimum", "Zach Stephens (Ribbiks)" },
+  { "Dead Plumber's Song", "Vladislav Baymurzin (ClumsyDoomer)" },
+  { "The Scarlet Citadel", "Shin Godzilla" },
+  { "Plurry", "Brendan Bradley (Bucket)" },
+  
+  { "Cry of Desperation", "Eris Falling" },
+  { "Plunge Saw", "Bucket" },
+  
+};
+
+script "mti_PlutoniaPrintTrackName" ENTER
+{
+	if (CheckInventory("mti_isplutonia"))
+	{
+		int levelnum = GetLevelInfo(LEVELINFO_LEVELNUM);		
+		int plutmusic = GetCVar("mti_plutonia_music");
+		if (levelnum > 0)
+		{
+			if (plutmusic == 1 )
+			{
+				print_track(mti_PlutoniaMidiPackMusicNames[levelnum-1][0], mti_PlutoniaMidiPackMusicNames[levelnum-1][1]);
+			}
+			else
+			{
+				print_track(mti_PlutoniaMusicNames[levelnum-1][0], mti_PlutoniaMusicNames[levelnum-1][1]);
+			}
+		}
+	}
+}

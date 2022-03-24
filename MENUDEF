@@ -1,0 +1,57 @@
+OptionValue mti_SigilMusicOptions
+{
+  0, "MIDI Soundtrack"
+  1, "MP3 Soundtrack"
+}
+
+OptionValue mti_PlutoniaMusicOptions
+{
+  0, "Original Soundtrack"
+  1, "Plutonia MIDI Pack"
+}
+
+OptionValue mti_HarmonyMusicOptions
+{
+  0, "Original Soundtrack"
+  1, "Harmony MIDI Pack"
+}
+
+OptionValue mti_HexenMusicOptions
+{
+  0, "MIDI Soundtrack"
+  //1, "CD Soundtrack"
+}
+
+OptionValue mti_DoomMusicOptions
+{
+  0, "Original Soundtrack"
+}
+
+OptionValue mti_Doom2MusicOptions
+{
+  0, "Original Soundtrack"
+  1, "Master Levels MIDI Pack"
+}
+
+OptionMenu mti_MusicLabelOptions
+{
+	Title       "Music Label Options"
+	
+	StaticText  ""
+	Option      "Doom Music", mti_doom_music, mti_DoomMusicOptions
+	Option      "Doom 2 Music", mti_doom2_music, mti_Doom2MusicOptions
+	Option      "Strife Music", mti_strife_music, mti_DoomMusicOptions
+	Option      "Sigil Music", mti_sigil_music, mti_SigilMusicOptions
+	Option      "Plutonia Music", mti_plutonia_music, mti_PlutoniaMusicOptions
+	Option      "TNT: Evilution Music", mti_tnt_music, mti_DoomMusicOptions
+	Option      "Harmony Music", mti_harmony_music, mti_HarmonyMusicOptions
+	Option      "Hexen Music", mti_hexen_music, mti_HexenMusicOptions
+	Option      "Heretic Music", mti_heretic_music, mti_DoomMusicOptions
+	Option      "Chex 3 Music", mti_chex3_music, mti_DoomMusicOptions
+}
+
+AddOptionMenu OptionsMenu
+{
+  StaticText ""
+  Submenu    "Music Label Options", mti_MusicLabelOptions
+}

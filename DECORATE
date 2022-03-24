@@ -1,0 +1,17 @@
+Actor mti_isfinaldoom : Inventory
+{
+inventory.maxamount 1
++INVENTORY.UNDROPPABLE
+}
+
+Actor mti_istnt : mti_isfinaldoom {}
+Actor mti_isdoom2 : mti_isfinaldoom {}
+Actor mti_isplutonia : mti_isfinaldoom {}
+Actor mti_ishexen : mti_isfinaldoom {}
+Actor mti_ishexendd : mti_isfinaldoom {}
+Actor mti_isheretic : mti_isfinaldoom {}
+Actor mti_isharmony : mti_isfinaldoom {}
+Actor mti_ischex3 : mti_isfinaldoom {}
+Actor mti_isnrftlmidi : mti_isfinaldoom {}
+Actor mti_isstrife : mti_isfinaldoom {}
+Actor mti_istvrmidipack : mti_isfinaldoom {}

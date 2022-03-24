@@ -1,0 +1,279 @@
+#library "DOOM2MUSIC"
+#include "zcommon.acs"
+#include "muscommon.acs"
+
+str mti_Doom2MusicNames[60][2] = {	
+  // doom 2
+  { "Running From Evil", "Robert Prince" },
+  { "The Healer Stalks", "Robert Prince" },
+  { "Countdown to Death", "Robert Prince" },
+  { "Between Levels", "Robert Prince" },
+  { "DOOM", "Robert Prince" },
+  { "In the Dark", "Robert Prince" },
+  { "Shawn's got the Shotgun", "Robert Prince" },
+  { "The Dave D. Taylor Blues", "Robert Prince" },
+  { "Into Sandy's City", "Robert Prince" },
+  { "The Demon's Dead", "Robert Prince" },
+  
+  { "The Healer Stalks", "Robert Prince" },
+  { "In the Dark", "Robert Prince" },
+  { "DOOM", "Robert Prince" },
+  { "The Dave D. Taylor Blues", "Robert Prince" },
+  { "Running From Evil", "Robert Prince" },
+  { "The Demon's Dead", "Robert Prince" },
+  { "The Healer Stalks", "Robert Prince" },
+  { "Waiting for Romero to Play", "Robert Prince" },
+  { "Shawn's got the Shotgun", "Robert Prince" },
+  { "Message for the Archvile", "Robert Prince" },
+  
+  { "Countdown to Death", "Robert Prince" },
+  { "The Dave D. Taylor Blues", "Robert Prince" },
+  { "Bye bye American Pie", "Robert Prince" },
+  { "In the Dark", "Robert Prince" },
+  { "Adrian's Asleep", "Robert Prince" },
+  { "Message for the Archvile", "Robert Prince" },
+  { "Waiting for Romero to Play", "Robert Prince" },
+  { "Getting too Tense", "Robert Prince" },
+  { "Shawn's got the Shotgun", "Robert Prince" },
+  { "Opening to Hell", "Robert Prince" },
+  
+  { "Evil Incarnate", "Robert Prince" },
+  { "The Ultimate Challenge/Conquest", "Robert Prince" },  // 32
+  {},{},{},{},{},{},{},
+  
+  // master levels
+  { "Running From Evil", "Robert Prince" },  // 40
+  { "The Healer Stalks", "Robert Prince" },
+  { "Countdown to Death", "Robert Prince" },
+  { "Between Levels", "Robert Prince" },
+  { "DOOM", "Robert Prince" },
+  { "In the Dark", "Robert Prince" },
+  { "Shawn's got the Shotgun", "Robert Prince" },
+  { "The Dave D. Taylor Blues", "Robert Prince" },
+  { "Into Sandy's City", "Robert Prince" },
+  { "The Demon's Dead", "Robert Prince" },
+  { "The Healer Stalks", "Robert Prince" },
+  { "In the Dark", "Robert Prince" },
+  { "DOOM", "Robert Prince" },
+  { "The Dave D. Taylor Blues", "Robert Prince" },
+  { "Running From Evil", "Robert Prince" },
+  { "The Demon's Dead", "Robert Prince" },
+  { "The Healer Stalks", "Robert Prince" },
+  { "Waiting for Romero to Play", "Robert Prince" },
+  { "Shawn's got the Shotgun", "Robert Prince" },
+  { "Message for the Archvile", "Robert Prince" },
+  { "Countdown to Death", "Robert Prince" },  // 60
+  
+};
+
+str mti_MLMidiPackMusicNames[60][2] = 
+{
+  // doom 2 master levels midi pack
+  { "Are We Really Doing This", "Peter Lawrence (MegaSphere)" },
+  { "Guess We Are Then", "Peter Lawrence (MegaSphere)" },
+  { "Don't Fall Lmao", "Peter Lawrence (MegaSphere)" },
+  { "Treasure Hunting", "Peter Lawrence (MegaSphere)" },
+  { "Fist Urethra", "Peter Lawrence (MegaSphere), j0e" },
+  { "Shepards Tone", "Peter Lawrence (MegaSphere)" },
+  { "Death by Enriched Bagel", "Xulgonoth" },
+  { "Waltz into Mancubus Fireballs", "Peter Lawrence (MegaSphere)" },
+  { "Ejipt", "Peter Lawrence (MegaSphere)" },
+  { "Inescapable Pit Time", "Peter Lawrence (MegaSphere)" },
+  
+  { "Wank City", "Peter Lawrence (MegaSphere)" },
+  { "Locrian Trap MIDI", "Peter Lawrence (MegaSphere)" },
+  { "Not Club Doom", "Peter Lawrence (MegaSphere)" },
+  { "Archvile King", "Peter Lawrence (MegaSphere)" },
+  { "Icon Of put this map in the Bin", "Peter Lawrence (MegaSphere)" },
+  { "Slaying at Night", "Peter Lawrence (MegaSphere)" },
+  { "Catnip Forest", "Bloo" },
+  { "Invisible Ledge is DUMB", "Peter Lawrence (MegaSphere), Jakub Majewski (KUBA18i)" },
+  { "Erecting The Black Tower", "Peter Lawrence (MegaSphere)" },
+  { "Grinding Teeth", "Peter Lawrence (MegaSphere)" },
+  
+  { "The Tit", "Peter Lawrence (MegaSphere)" },
+  { "The Dave D. Taylor Blues", "Robert Prince" },
+  { "Bye bye American Pie", "Robert Prince" },
+  { "In the Dark", "Robert Prince" },
+  { "Adrian's Asleep", "Robert Prince" },
+  { "Message for the Archvile", "Robert Prince" },
+  { "Waiting for Romero to Play", "Robert Prince" },
+  { "Getting too Tense", "Robert Prince" },
+  { "Shawn's got the Shotgun", "Robert Prince" },
+  { "Opening to Hell", "Robert Prince" },
+  
+  { "Evil Incarnate", "Robert Prince" },
+  { "The Ultimate Challenge/Conquest", "Robert Prince" },  // 32
+  {},{},{},{},{},{},{},
+  
+  // master levels midi pack
+  { "Are We Really Doing This", "Peter Lawrence (MegaSphere)" },  // 40
+  { "Guess We Are Then", "Peter Lawrence (MegaSphere)" },
+  { "Don't Fall Lmao", "Peter Lawrence (MegaSphere)" },
+  { "Treasure Hunting", "Peter Lawrence (MegaSphere)" },
+  { "Fist Urethra", "Peter Lawrence (MegaSphere), j0e" },
+  { "Shepards Tone", "Peter Lawrence (MegaSphere)" },
+  { "Death by Enriched Bagel", "Xulgonoth" },
+  { "Waltz into Mancubus Fireballs", "Peter Lawrence (MegaSphere)" },
+  { "Ejipt", "Peter Lawrence (MegaSphere)" },
+  { "Inescapable Pit Time", "Peter Lawrence (MegaSphere)" },
+  
+  { "Wank City", "Peter Lawrence (MegaSphere)" },
+  { "Locrian Trap MIDI", "Peter Lawrence (MegaSphere)" },
+  { "Not Club Doom", "Peter Lawrence (MegaSphere)" },
+  { "Archvile King", "Peter Lawrence (MegaSphere)" },
+  { "Icon Of put this map in the Bin", "Peter Lawrence (MegaSphere)" },
+  { "Slaying at Night", "Peter Lawrence (MegaSphere)" },
+  { "Catnip Forest", "Bloo" },
+  { "Invisible Ledge is DUMB", "Peter Lawrence (MegaSphere), Jakub Majewski (KUBA18i)" },
+  { "Erecting The Black Tower", "Peter Lawrence (MegaSphere)" },
+  { "Grinding Teeth", "Peter Lawrence (MegaSphere)" },
+  { "The Tit", "Peter Lawrence (MegaSphere)" },  // 60
+};
+
+// no rest for the living
+str mti_NRFTLMusicNames[9][2] = {
+  { "Message for the Archvile", "Robert Prince" },
+  { "The Dave D. Taylor Blues", "Robert Prince" },
+  { "DOOM", "Robert Prince" },
+  { "Shawn's got the Shotgun", "Robert Prince" },
+  { "Into Sandy's City", "Robert Prince" },
+  { "In the Dark", "Robert Prince" },
+  { "Into Sandy's City", "Robert Prince" },
+  { "Shawn's got the Shotgun", "Robert Prince" },
+  { "The Dave D. Taylor Blues", "Robert Prince" },
+};
+
+// no rest for the living comm. midi pack
+str mti_NRFTLMidiPackMusicNames[9][2] = {
+  { "Homesick", "decino" },
+  { "Archaic Doctrine", "TrialD" },
+  { "Dry Gulch", "JD Herrera" },
+  { "The Last Gatling Gun Rodeo", "Cammy" },
+  { "Unbearable Torture", "Sego" },
+  { "Staccato Slaughter", "Peter Lawrence (MegaSphere)" },
+  { "Monsieur Gourmet", "JD Herrera" },
+  { "Darkness Unfolds", "Bloo" },
+  { "Mountain Slayers of the Eagle's Thunder", "Rogue Akai, Sumo" },
+};
+
+// no rest for the living - tvr midi pack
+str mti_NRFTL_TVR_MusicNames[9][2] = {
+  { "Black Colossus", "Hellish Godzilla & Jimmy" },
+  { "Hangar 7", "Jimmy" },
+  { "Last Resort", "Jimmy" },
+  { "Forgotten Valley", "Icytux" },
+  { "Phalarope Shuffle", "yakfak" },
+  { "Wasted", "Doomkid" },
+  { "Phalarope Shuffle", "yakfak" },
+  { "Forgotten Valley", "Icytux" },
+  { "Hangar 7", "Jimmy" },
+};
+
+str mti_TVRMidiPackMusicNames[60][2] = {
+  { "Freighthoppers", "Jimmy" },
+  { "Trash", "Alfonzo" },
+  { "Bystreet", "Akse & Jimmy" },
+  { "Westopolis", "Viscra Maelstrom" },
+  { "Last Resort", "Jimmy" },
+  { "Wasted", "Doomkid" },
+  { "Forgotten Valley", "Icytux" },
+  { "Hangar 7", "Jimmy" },
+  { "Phalarope Shuffle", "yakfak" },
+  { "Mint Petal", "Viscra Maelstrom" },
+  
+  { "Smooth Infiltrator", "Kassman & Jimmy" },
+  { "Midnight Dinner", "CWolf & Jimmy" },
+  { "Haze", "Eris Falling" },
+  { "Battle of Chaos", "Eris Falling" },
+  { "Sappers & Moles", "yakfak" },
+  { "The Revenant", "KevinHEZ" },
+  { "Mining for Paranoia", "Akse" },
+  { "Acidic Lymph", "ClumsyDoomer" },
+  { "Gargoyles", "Jimmy" },
+  { "Black Colossus", "Hellish Godzilla & Jimmy" },
+  
+  { "Unearth", "Alfonzo" },
+  { "Empyrean Shard", "ClumsyDoomer" },
+  { "Ancient Enclosure", "Viscra Maelstrom" },
+  { "Beneath the Stars", "Eris Falling" },
+  { "Keepsake Fever", "Alfonzo" },
+  { "Reach Within", "Jimmy" },
+  { "Clay", "Jimmy" },
+  { "I Sacrifice", "Hellish Godzilla, Jimmy & Alfonzo" },
+  { "Souls Trapped Between Rotten Bricks", "ClumsyDoomer" },
+  { "The Forgotten God", "Eris Falling" },
+  
+  { "Redback", "Alfonzo & Jimmy" },
+  { "King Roo", "Alfonzo" },
+  { "Evil On Tour", "Alfonzo & Jimmy" },  // 33
+  {},{},{},{},{},{},
+  
+  // master levels
+  { "Freighthoppers", "Jimmy" },  // 40
+  { "Trash", "Alfonzo" },
+  { "Bystreet", "Akse & Jimmy" },
+  { "Westopolis", "Viscra Maelstrom" },
+  { "Last Resort", "Jimmy" },
+  { "Wasted", "Doomkid" },
+  { "Forgotten Valley", "Icytux" },
+  { "Hangar 7", "Jimmy" },
+  { "Phalarope Shuffle", "yakfak" },
+  { "Mint Petal", "Viscra Maelstrom" },
+  
+  { "Smooth Infiltrator", "Kassman & Jimmy" },
+  { "Midnight Dinner", "CWolf & Jimmy" },
+  { "Haze", "Eris Falling" },
+  { "Battle of Chaos", "Eris Falling" },
+  { "Sappers & Moles", "yakfak" },
+  { "The Revenant", "KevinHEZ" },
+  { "Mining for Paranoia", "Akse" },
+  { "Acidic Lymph", "ClumsyDoomer" },
+  { "Gargoyles", "Jimmy" },
+  { "Black Colossus", "Hellish Godzilla & Jimmy" },
+  { "Unearth", "Alfonzo" },  // 60
+  
+  
+};
+
+script "mti_Doom2PrintTrackName" ENTER
+{
+	if (CheckInventory("mti_isdoom2"))
+	{
+		int doom2music = GetCVar("mti_doom2_music");
+		int levelnum = find_level_num();
+		
+		if (levelnum >= 61 )  // NRFTL
+		{
+			levelnum -= 60;
+			if (CheckInventory("mti_isnrftlmidi"))
+			{
+				print_track(mti_NRFTLMidiPackMusicNames[levelnum-1][0], mti_NRFTLMidiPackMusicNames[levelnum-1][1]);
+			}
+			else if (CheckInventory("mti_istvrmidipack"))
+			{
+				print_track(mti_NRFTL_TVR_MusicNames[levelnum-1][0], mti_NRFTL_TVR_MusicNames[levelnum-1][1]);
+			}
+			else
+			{
+				print_track(mti_NRFTLMusicNames[levelnum-1][0], mti_NRFTLMusicNames[levelnum-1][1]);
+			}
+		}
+		
+		else if (levelnum > 0)
+		{
+			if (CheckInventory("mti_istvrmidipack"))  // Revolution Midi Pack
+			{
+				print_track(mti_TVRMidiPackMusicNames[levelnum-1][0], mti_TVRMidiPackMusicNames[levelnum-1][1]);
+			}
+			else if (doom2music == 1)  // Master Levels Midi Pack
+			{
+				print_track(mti_MLMidiPackMusicNames[levelnum-1][0], mti_MLMidiPackMusicNames[levelnum-1][1]);
+			}
+			else  // Original Doom 2 Music
+			{
+				print_track(mti_Doom2MusicNames[levelnum-1][0], mti_Doom2MusicNames[levelnum-1][1]);
+			}
+		}
+	}
+}
