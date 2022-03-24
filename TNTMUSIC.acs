@@ -42,12 +42,12 @@ str mti_TntMusicNames[32][2] = {
 
 script "mti_TntPrintTrackName" ENTER
 {
-	if (CheckInventory("mti_istnt"))
-	{
-		int levelnum = GetLevelInfo(LEVELINFO_LEVELNUM);
-		if (levelnum > 0)
-		{
-			print_track(mti_TntMusicNames[levelnum-1][0], mti_TntMusicNames[levelnum-1][1]);
-		}
-	}
+  if (CheckInventory("mti_istnt"))
+  {
+    int levelnum = GetLevelInfo(LEVELINFO_LEVELNUM);
+    if (levelnum > 0)
+    {
+      print_track(mti_TntMusicNames[levelnum-1][0], mti_TntMusicNames[levelnum-1][1]);
+    }
+  }
 }

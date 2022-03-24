@@ -25,7 +25,7 @@ str mti_StrifeMusicNames[31][2] = {
   { "Slide", "Morey Goldstein" },
   { "Strike", "Morey Goldstein" },
   { "Dark", "Morey Goldstein" },
- 
+
   { "Tech", "Morey Goldstein" },
   { "Slide", "Morey Goldstein" },
   { "Drone", "Morey Goldstein" },
@@ -42,12 +42,12 @@ str mti_StrifeMusicNames[31][2] = {
 
 script "mti_StrifePrintTrackName" ENTER
 {
-	if (CheckInventory("mti_isstrife"))
-	{
-		int levelnum = find_level_num();
-		if (levelnum > 0)
-		{
-			print_track(mti_StrifeMusicNames[levelnum-1][0], mti_StrifeMusicNames[levelnum-1][1]);
-		}
-	}
+  if (CheckInventory("mti_isstrife"))
+  {
+    int levelnum = find_level_num();
+    if (levelnum > 0)
+    {
+      print_track(mti_StrifeMusicNames[levelnum-1][0], mti_StrifeMusicNames[levelnum-1][1]);
+    }
+  }
 }

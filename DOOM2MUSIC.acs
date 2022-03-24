@@ -242,31 +242,31 @@ str mti_NRFTLMidiPackMusicNames[9][2] = {
 
 script "mti_Doom2PrintTrackName" ENTER
 {
-	if (CheckInventory("mti_isdoom2"))
-	{
-		int doom2music = GetCVar("mti_doom2_music");
-		int levelnum = find_level_num();
-		
-		if (levelnum >= 61 && CheckInventory("mti_isnrftlmidi")) // NRFTL Midi Pack
-		{
-			levelnum -= 60;
-			print_track(mti_NRFTLMidiPackMusicNames[levelnum-1][0], mti_NRFTLMidiPackMusicNames[levelnum-1][1]);
-		}
-		
-		else if (levelnum > 0)
-		{
-			if (doom2music == 2)  // Revolution Midi Pack
-			{
-				print_track(mti_TVRMidiPackMusicNames[levelnum-1][0], mti_TVRMidiPackMusicNames[levelnum-1][1]);
-			}
-			else if (doom2music == 1)  // Master Levels Midi Pack
-			{
-				print_track(mti_MLMidiPackMusicNames[levelnum-1][0], mti_MLMidiPackMusicNames[levelnum-1][1]);
-			}
-			else  // Original Doom 2 Music
-			{
-				print_track(mti_Doom2MusicNames[levelnum-1][0], mti_Doom2MusicNames[levelnum-1][1]);
-			}
-		}
-	}
+  if (CheckInventory("mti_isdoom2"))
+  {
+    int doom2music = GetCVar("mti_doom2_music");
+    int levelnum = find_level_num();
+    
+    if (levelnum >= 61 && CheckInventory("mti_isnrftlmidi")) // NRFTL Midi Pack
+    {
+      levelnum -= 60;
+      print_track(mti_NRFTLMidiPackMusicNames[levelnum-1][0], mti_NRFTLMidiPackMusicNames[levelnum-1][1]);
+    }
+    
+    else if (levelnum > 0)
+    {
+      if (doom2music == 2)  // Revolution Midi Pack
+      {
+        print_track(mti_TVRMidiPackMusicNames[levelnum-1][0], mti_TVRMidiPackMusicNames[levelnum-1][1]);
+      }
+      else if (doom2music == 1)  // Master Levels Midi Pack
+      {
+        print_track(mti_MLMidiPackMusicNames[levelnum-1][0], mti_MLMidiPackMusicNames[levelnum-1][1]);
+      }
+      else  // Original Doom 2 Music
+      {
+        print_track(mti_Doom2MusicNames[levelnum-1][0], mti_Doom2MusicNames[levelnum-1][1]);
+      }
+    }
+  }
 }

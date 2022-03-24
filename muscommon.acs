@@ -1,51 +1,51 @@
 function void print_track(str music, str artist)
 {
-	if (music != "")
-	{
-		SetFont("SMALLFONT");
-		SetHudSize(0, 0, FALSE);
-		HudMessage(s:"\caMUSIC: \cj\"",s:music, s:"\" \cbby ", s:artist; HUDMSG_TYPEON | HUDMSG_LOG, 1, CR_UNTRANSLATED, 0.05, 0.05, 2.0, 0.03, 2.0);
-	}
+    if (music != "")
+    {
+        SetFont("SMALLFONT");
+        SetHudSize(0, 0, FALSE);
+        HudMessage(s:"\caMUSIC: \cj\"",s:music, s:"\" \cbby ", s:artist; HUDMSG_TYPEON | HUDMSG_LOG, 1, CR_UNTRANSLATED, 0.05, 0.05, 2.0, 0.03, 2.0);
+    }
 }
 
 function int find_level_num(void)
 {
-	int levelnum = GetLevelInfo(LEVELINFO_LEVELNUM);
-	str mapname = StrParam(n:PRINTNAME_LEVEL);
-	
-	// master levels check
-	if (mapname == "ATTACK")        levelnum = 40;
-	else if (mapname == "CANYON")   levelnum = 41;
-	else if (mapname == "CATWALK")  levelnum = 42;
-	else if (mapname == "COMBINE")  levelnum = 43;
-	else if (mapname == "FISTULA")  levelnum = 44;
-	else if (mapname == "GARRISON") levelnum = 45;
-	else if (mapname == "MANOR")    levelnum = 46;
-	else if (mapname == "PARADOX")  levelnum = 47;
-	else if (mapname == "SUBSPACE") levelnum = 48;
-	else if (mapname == "SUBTERRA") levelnum = 49;
-	else if (mapname == "TTRAP")    levelnum = 50;
-	else if (mapname == "VIRGIL")   levelnum = 51;
-	else if (mapname == "MINOS")    levelnum = 52;
-	else if (mapname == "BLOODSEA") levelnum = 53;
-	else if (mapname == "MEPHISTO") levelnum = 54;
-	else if (mapname == "NESSUS")   levelnum = 55;
-	else if (mapname == "GERYON")   levelnum = 56;
-	else if (mapname == "VESPERAS") levelnum = 57;
-	else if (mapname == "BLACKTWR") levelnum = 58;
-	else if (mapname == "TEETH")    levelnum = 59;
-	else if (mapname == "BADDREAM") levelnum = 60;
-	
-	// no rest for the living check
-	else if (mapname == "LEVEL01")  levelnum = 61;
-	else if (mapname == "LEVEL02")  levelnum = 62;
-	else if (mapname == "LEVEL03")  levelnum = 63;
-	else if (mapname == "LEVEL04")  levelnum = 64;
-	else if (mapname == "LEVEL05")  levelnum = 65;
-	else if (mapname == "LEVEL06")  levelnum = 66;
-	else if (mapname == "LEVEL07")  levelnum = 67;
-	else if (mapname == "LEVEL08")  levelnum = 68;
-	else if (mapname == "LEVEL09")  levelnum = 69;
-	
-	return levelnum;
+    int levelnum = GetLevelInfo(LEVELINFO_LEVELNUM);
+    str mapname = StrParam(n:PRINTNAME_LEVEL);
+    
+    // master levels check
+    if (mapname == "ATTACK")        levelnum = 40;
+    else if (mapname == "CANYON")   levelnum = 41;
+    else if (mapname == "CATWALK")  levelnum = 42;
+    else if (mapname == "COMBINE")  levelnum = 43;
+    else if (mapname == "FISTULA")  levelnum = 44;
+    else if (mapname == "GARRISON") levelnum = 45;
+    else if (mapname == "MANOR")    levelnum = 46;
+    else if (mapname == "PARADOX")  levelnum = 47;
+    else if (mapname == "SUBSPACE") levelnum = 48;
+    else if (mapname == "SUBTERRA") levelnum = 49;
+    else if (mapname == "TTRAP")    levelnum = 50;
+    else if (mapname == "VIRGIL")   levelnum = 51;
+    else if (mapname == "MINOS")    levelnum = 52;
+    else if (mapname == "BLOODSEA") levelnum = 53;
+    else if (mapname == "MEPHISTO") levelnum = 54;
+    else if (mapname == "NESSUS")   levelnum = 55;
+    else if (mapname == "GERYON")   levelnum = 56;
+    else if (mapname == "VESPERAS") levelnum = 57;
+    else if (mapname == "BLACKTWR") levelnum = 58;
+    else if (mapname == "TEETH")    levelnum = 59;
+    else if (mapname == "BADDREAM") levelnum = 60;
+    
+    // no rest for the living check
+    else if (mapname == "LEVEL01")  levelnum = 61;
+    else if (mapname == "LEVEL02")  levelnum = 62;
+    else if (mapname == "LEVEL03")  levelnum = 63;
+    else if (mapname == "LEVEL04")  levelnum = 64;
+    else if (mapname == "LEVEL05")  levelnum = 65;
+    else if (mapname == "LEVEL06")  levelnum = 66;
+    else if (mapname == "LEVEL07")  levelnum = 67;
+    else if (mapname == "LEVEL08")  levelnum = 68;
+    else if (mapname == "LEVEL09")  levelnum = 69;
+    
+    return levelnum;
 }

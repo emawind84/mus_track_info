@@ -3,71 +3,71 @@
 #include "muscommon.acs"
 
 str mti_HereticMusicNames[48][2] = {
-	
-	{ "Dark", "Kevin Schilder" },
-	{ "Fred", "Kevin Schilder" },
-	{ "Ded", "Kevin Schilder" },
-	{ "Elf", "Kevin Schilder" },
-	{ "Marek", "Kevin Schilder" },
-	{ "Mist", "Kevin Schilder" },
-	{ "Mole", "Kevin Schilder" },
-	{ "John", "Kevin Schilder" },
-	{ "Atcoty", "Kevin Schilder" },
-	
-	{ "Acacia", "Kevin Schilder" },
-	{ "Atlas", "Kevin Schilder" },
-	{ "Bluroc", "Kevin Schilder" },
-	{ "Build", "Kevin Schilder" },
-	{ "Elf", "Kevin Schilder" },
-	{ "Onyx", "Kevin Schilder" },
-	{ "Wait", "Kevin Schilder" },
-	{ "Arpo", "Kevin Schilder" },
-	{ "Olkin", "Kevin Schilder" },
-	
-	{ "Dark", "Kevin Schilder" },
-	{ "Drive", "Kevin Schilder" },
-	{ "Watch", "Kevin Schilder" },
-	{ "Mist", "Kevin Schilder" },
-	{ "Ded", "Kevin Schilder" },
-	{ "Fred", "Kevin Schilder" },
-	{ "Marek", "Kevin Schilder" },
-	{ "Atcoty", "Kevin Schilder" },
-	{ "Onyx", "Kevin Schilder" },
-	
-	{ "Mist", "Kevin Schilder" },
-	{ "Fred", "Kevin Schilder" },
-	{ "Ded", "Kevin Schilder" },
-	{ "Elf", "Kevin Schilder" },
-	{ "Marek", "Kevin Schilder" },
-	{ "Dark", "Kevin Schilder" },
-	{ "Mole", "Kevin Schilder" },
-	{ "John", "Kevin Schilder" },
-	{ "Atcoty", "Kevin Schilder" },
-	
-	{ "Acacia", "Kevin Schilder" },
-	{ "Atlas", "Kevin Schilder" },
-	{ "Bluroc", "Kevin Schilder" },
-	{ "Build", "Kevin Schilder" },
-	{ "Elf", "Kevin Schilder" },
-	{ "Onyx", "Kevin Schilder" },
-	{ "Wait", "Kevin Schilder" },
-	{ "Arpo", "Kevin Schilder" },
-	{ "Olkin", "Kevin Schilder" },
-	
-	{ "Drive", "Kevin Schilder" },
-	{ "Watch", "Kevin Schilder" },
-	{ "Mist", "Kevin Schilder" },
+    
+    { "Dark", "Kevin Schilder" },
+    { "Fred", "Kevin Schilder" },
+    { "Ded", "Kevin Schilder" },
+    { "Elf", "Kevin Schilder" },
+    { "Marek", "Kevin Schilder" },
+    { "Mist", "Kevin Schilder" },
+    { "Mole", "Kevin Schilder" },
+    { "John", "Kevin Schilder" },
+    { "Atcoty", "Kevin Schilder" },
+    
+    { "Acacia", "Kevin Schilder" },
+    { "Atlas", "Kevin Schilder" },
+    { "Bluroc", "Kevin Schilder" },
+    { "Build", "Kevin Schilder" },
+    { "Elf", "Kevin Schilder" },
+    { "Onyx", "Kevin Schilder" },
+    { "Wait", "Kevin Schilder" },
+    { "Arpo", "Kevin Schilder" },
+    { "Olkin", "Kevin Schilder" },
+    
+    { "Dark", "Kevin Schilder" },
+    { "Drive", "Kevin Schilder" },
+    { "Watch", "Kevin Schilder" },
+    { "Mist", "Kevin Schilder" },
+    { "Ded", "Kevin Schilder" },
+    { "Fred", "Kevin Schilder" },
+    { "Marek", "Kevin Schilder" },
+    { "Atcoty", "Kevin Schilder" },
+    { "Onyx", "Kevin Schilder" },
+    
+    { "Mist", "Kevin Schilder" },
+    { "Fred", "Kevin Schilder" },
+    { "Ded", "Kevin Schilder" },
+    { "Elf", "Kevin Schilder" },
+    { "Marek", "Kevin Schilder" },
+    { "Dark", "Kevin Schilder" },
+    { "Mole", "Kevin Schilder" },
+    { "John", "Kevin Schilder" },
+    { "Atcoty", "Kevin Schilder" },
+    
+    { "Acacia", "Kevin Schilder" },
+    { "Atlas", "Kevin Schilder" },
+    { "Bluroc", "Kevin Schilder" },
+    { "Build", "Kevin Schilder" },
+    { "Elf", "Kevin Schilder" },
+    { "Onyx", "Kevin Schilder" },
+    { "Wait", "Kevin Schilder" },
+    { "Arpo", "Kevin Schilder" },
+    { "Olkin", "Kevin Schilder" },
+    
+    { "Drive", "Kevin Schilder" },
+    { "Watch", "Kevin Schilder" },
+    { "Mist", "Kevin Schilder" },
 
 };
 
 script "mti_HereticPrintTrackName" ENTER
 {
-	if (CheckInventory("mti_isheretic"))
-	{
-		int levelnum = GetLevelInfo(LEVELINFO_LEVELNUM);
-		if (levelnum > 0)
-		{
-			print_track(mti_HereticMusicNames[levelnum-1][0], mti_HereticMusicNames[levelnum-1][1]);
-		}
-	}
+    if (CheckInventory("mti_isheretic"))
+    {
+        int levelnum = GetLevelInfo(LEVELINFO_LEVELNUM);
+        if (levelnum > 0)
+        {
+            print_track(mti_HereticMusicNames[levelnum-1][0], mti_HereticMusicNames[levelnum-1][1]);
+        }
+    }
 }

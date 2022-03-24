@@ -75,12 +75,12 @@ str mti_Doom64MusicNames[60][2] = {
 
 script "mti_Doom64PrintTrackName" ENTER
 {
-	if (CheckInventory("mti_isdoom64"))
-	{
-		int levelnum = find_level_num();
-		if (levelnum > 0)
-		{
-			print_track(mti_Doom64MusicNames[levelnum-1][0], mti_Doom64MusicNames[levelnum-1][1]);
-		}
-	}
+  if (CheckInventory("mti_isdoom64"))
+  {
+    int levelnum = find_level_num();
+    if (levelnum > 0)
+    {
+      print_track(mti_Doom64MusicNames[levelnum-1][0], mti_Doom64MusicNames[levelnum-1][1]);
+    }
+  }
 }

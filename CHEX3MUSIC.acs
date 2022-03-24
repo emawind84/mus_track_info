@@ -25,13 +25,13 @@ str mti_Chex3MusicNames[15][2] = {
 
 script "mti_Chex3PrintTrackName" ENTER
 {
-	if (CheckInventory("mti_ischex3"))
-	{
-		Log(s:"ISCHEX3");
-		int levelnum = GetLevelInfo(LEVELINFO_LEVELNUM);
-		if (levelnum > 0)
-		{
-			print_track(mti_Chex3MusicNames[levelnum-1][0], mti_Chex3MusicNames[levelnum-1][1]);
-		}
-	}
+  if (CheckInventory("mti_ischex3"))
+  {
+    Log(s:"ISCHEX3");
+    int levelnum = GetLevelInfo(LEVELINFO_LEVELNUM);
+    if (levelnum > 0)
+    {
+      print_track(mti_Chex3MusicNames[levelnum-1][0], mti_Chex3MusicNames[levelnum-1][1]);
+    }
+  }
 }

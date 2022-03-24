@@ -1,4 +1,4 @@
-// GameInfo
-// {
-// 	AddEventHandlers = "mti_MusicInfoHandler"
-// }
+GameInfo
+{
+    AddEventHandlers = "mti_MusicInfoHandler"
+}

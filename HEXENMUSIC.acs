@@ -3,66 +3,66 @@
 #include "muscommon.acs"
 
 str mti_HexenMusicNames[40][2] = {
-	// hub 1
-	{ "Winnowing Hall", "Kevin Schilder" },
-	{ "Jach", "Kevin Schilder" },
-	{ "Simon", "Kevin Schilder" },
-	{ "Wutzit", "Kevin Schilder" },
-	{ "Falcon", "Kevin Schilder" },
-	{ "Level", "Kevin Schilder" },
-	{},  // 7
+    // hub 1
+    { "Winnowing Hall", "Kevin Schilder" },
+    { "Jach", "Kevin Schilder" },
+    { "Simon", "Kevin Schilder" },
+    { "Wutzit", "Kevin Schilder" },
+    { "Falcon", "Kevin Schilder" },
+    { "Level", "Kevin Schilder" },
+    {},  // 7
 
-	// hub 2
-	{ "Swamp", "Kevin Schilder" },
-	{ "Deep", "Kevin Schilder" },
-	{ "Fubas", "Kevin Schilder" },
-	{ "Grove", "Kevin Schilder" },
-	{ "Fortress", "Kevin Schilder" },
-	{ "Crypt", "Kevin Schilder" },
-	
-	{},  // 14
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},  // 20
-	
-	// hub 4
-	{ "Fooja", "Kevin Schilder" },
-	{ "Sixate", "Kevin Schilder" },
-	{ "Wobaby", "Kevin Schilder" },
-	{ "Crypt", "Kevin Schilder" },
-	{ "Fantasy", "Kevin Schilder" },
-	{ "Blech", "Kevin Schilder" },  // 26
-	
-	// hub 3
-	{ "Void", "Kevin Schilder" },
-	{ "Chapel 1", "Kevin Schilder" },
-	{},  // 29
-	{ "Chapel 3", "Kevin Schilder" },
-	{ "Chapel 4", "Kevin Schilder" },
-	{ "Chippy", "Kevin Schilder" },
-	{ "Perc", "Kevin Schilder" },
-	{ "Secret Chapel", "Kevin Schilder" },
-	
-	// hub 5
-	{ "Bones", "Kevin Schilder" },
-	{ "Octo", "Kevin Schilder" },
-	{ "Rithm", "Kevin Schilder" },
-	{ "Stalker", "Kevin Schilder" },
-	{ "Borkesis", "Kevin Schilder" },
-	{ "Crucible 2", "Kevin Schilder" },  // 40
+    // hub 2
+    { "Swamp", "Kevin Schilder" },
+    { "Deep", "Kevin Schilder" },
+    { "Fubas", "Kevin Schilder" },
+    { "Grove", "Kevin Schilder" },
+    { "Fortress", "Kevin Schilder" },
+    { "Crypt", "Kevin Schilder" },
+    
+    {},  // 14
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},  // 20
+    
+    // hub 4
+    { "Fooja", "Kevin Schilder" },
+    { "Sixate", "Kevin Schilder" },
+    { "Wobaby", "Kevin Schilder" },
+    { "Crypt", "Kevin Schilder" },
+    { "Fantasy", "Kevin Schilder" },
+    { "Blech", "Kevin Schilder" },  // 26
+    
+    // hub 3
+    { "Void", "Kevin Schilder" },
+    { "Chapel 1", "Kevin Schilder" },
+    {},  // 29
+    { "Chapel 3", "Kevin Schilder" },
+    { "Chapel 4", "Kevin Schilder" },
+    { "Chippy", "Kevin Schilder" },
+    { "Perc", "Kevin Schilder" },
+    { "Secret Chapel", "Kevin Schilder" },
+    
+    // hub 5
+    { "Bones", "Kevin Schilder" },
+    { "Octo", "Kevin Schilder" },
+    { "Rithm", "Kevin Schilder" },
+    { "Stalker", "Kevin Schilder" },
+    { "Borkesis", "Kevin Schilder" },
+    { "Crucible 2", "Kevin Schilder" },  // 40
 };
 
 script "mti_HexenPrintTrackName" ENTER
 {
-	if (CheckInventory("mti_ishexen"))
-	{
-		int levelnum = GetLevelInfo(LEVELINFO_LEVELNUM);
-		if (levelnum > 0)
-		{
-			print_track(mti_HexenMusicNames[levelnum-1][0], mti_HexenMusicNames[levelnum-1][1]);
-		}
-	}
+    if (CheckInventory("mti_ishexen"))
+    {
+        int levelnum = GetLevelInfo(LEVELINFO_LEVELNUM);
+        if (levelnum > 0)
+        {
+            print_track(mti_HexenMusicNames[levelnum-1][0], mti_HexenMusicNames[levelnum-1][1]);
+        }
+    }
 }

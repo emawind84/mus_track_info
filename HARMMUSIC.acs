@@ -3,49 +3,49 @@
 #include "muscommon.acs"
 
 str mti_HarmonyMidiPackMusicNames[11][2] = {
-	{ "Insurgence", "James Paddock (Jimmy)" },
-	{ "Desperate Intruder", "James Paddock (Jimmy)" },
-	{ "Cryptology", "James Paddock (Jimmy)" },
-	{ "Action Stations", "James Paddock (Jimmy)" },
-	{ "Sick Building Syndrome", "James Paddock (Jimmy)" },
-	{ "Pipeline", "James Paddock (Jimmy)" },
-	{ "Flood Gates", "James Paddock (Jimmy)" },
-	{ "Running out of Steam", "James Paddock (Jimmy)" },
-	{ "Engage", "James Paddock (Jimmy)" },
-	{ "Mutated Paradise", "James Paddock (Jimmy)" },
-	{ "Hall of Faces", "James Paddock (Jimmy)" },
+    { "Insurgence", "James Paddock (Jimmy)" },
+    { "Desperate Intruder", "James Paddock (Jimmy)" },
+    { "Cryptology", "James Paddock (Jimmy)" },
+    { "Action Stations", "James Paddock (Jimmy)" },
+    { "Sick Building Syndrome", "James Paddock (Jimmy)" },
+    { "Pipeline", "James Paddock (Jimmy)" },
+    { "Flood Gates", "James Paddock (Jimmy)" },
+    { "Running out of Steam", "James Paddock (Jimmy)" },
+    { "Engage", "James Paddock (Jimmy)" },
+    { "Mutated Paradise", "James Paddock (Jimmy)" },
+    { "Hall of Faces", "James Paddock (Jimmy)" },
 };
 
 str mti_HarmonyMusicNames[11][2] = {
-	{ "Mercury Stripes, Blue Mess", "Kyū's" },
-	{ "Untitled", "Kyū's" },
-	{ "Untitled", "Kyū's" },
-	{ "Mercury Stripes, Blue Mess", "Kyū's" },
-	{ "Mercury Stripes, Blue Mess", "Kyū's" },
-	{ "The Edge", "Kyū's" },
-	{ "The Edge", "Kyū's" },
-	{ "Mercury Stripes, Blue Mess", "Kyū's" },
-	{ "Mercury Stripes, Blue Mess", "Kyū's" },
-	{ "Untitled", "Kyū's" },
-	{ "Untitled", "Kyū's" },
+    { "Mercury Stripes, Blue Mess", "Kyū's" },
+    { "Untitled", "Kyū's" },
+    { "Untitled", "Kyū's" },
+    { "Mercury Stripes, Blue Mess", "Kyū's" },
+    { "Mercury Stripes, Blue Mess", "Kyū's" },
+    { "The Edge", "Kyū's" },
+    { "The Edge", "Kyū's" },
+    { "Mercury Stripes, Blue Mess", "Kyū's" },
+    { "Mercury Stripes, Blue Mess", "Kyū's" },
+    { "Untitled", "Kyū's" },
+    { "Untitled", "Kyū's" },
 };
 
 script "mti_HarmonyPrintTrackName" ENTER
 {
-	if (CheckInventory("mti_isharmony"))
-	{
-		int levelnum = GetLevelInfo(LEVELINFO_LEVELNUM);
-		int harmmusic = GetCVar("mti_harmony_music");
-		if (levelnum > 0)
-		{
-			if (harmmusic == 1)
-			{
-				print_track(mti_HarmonyMidiPackMusicNames[levelnum-1][0], mti_HarmonyMidiPackMusicNames[levelnum-1][1]);
-			}
-			else
-			{
-				print_track(mti_HarmonyMusicNames[levelnum-1][0], mti_HarmonyMusicNames[levelnum-1][1]);
-			}
-		}
-	}
+    if (CheckInventory("mti_isharmony"))
+    {
+        int levelnum = GetLevelInfo(LEVELINFO_LEVELNUM);
+        int harmmusic = GetCVar("mti_harmony_music");
+        if (levelnum > 0)
+        {
+            if (harmmusic == 1)
+            {
+                print_track(mti_HarmonyMidiPackMusicNames[levelnum-1][0], mti_HarmonyMidiPackMusicNames[levelnum-1][1]);
+            }
+            else
+            {
+                print_track(mti_HarmonyMusicNames[levelnum-1][0], mti_HarmonyMusicNames[levelnum-1][1]);
+            }
+        }
+    }
 }
