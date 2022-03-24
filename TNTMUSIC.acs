@@ -1,4 +1,4 @@
-#library "DOOM2MUSIC"
+#library "TNTMUSIC"
 #include "zcommon.acs"
 #include "muscommon.acs"
 
