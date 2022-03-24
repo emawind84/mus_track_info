@@ -1,4 +1,4 @@
-#library "DOOM2MUSIC"
+#library "HARMMUSIC"
 #include "zcommon.acs"
 #include "muscommon.acs"
 

@@ -1,7 +1,7 @@
 OptionValue mti_SigilMusicOptions
 {
   0, "MIDI Soundtrack"
-  1, "MP3 Soundtrack"
+  1, "MP3 Soundtrack (Buckethead)"
 }
 
 OptionValue mti_PlutoniaMusicOptions
@@ -31,6 +31,7 @@ OptionValue mti_Doom2MusicOptions
 {
   0, "Original Soundtrack"
   1, "Master Levels MIDI Pack"
+  2, "Revolution! MIDI Pack"
 }
 
 OptionMenu mti_MusicLabelOptions
@@ -48,6 +49,13 @@ OptionMenu mti_MusicLabelOptions
 	Option      "Hexen Music", mti_hexen_music, mti_HexenMusicOptions
 	Option      "Heretic Music", mti_heretic_music, mti_DoomMusicOptions
 	Option      "Chex 3 Music", mti_chex3_music, mti_DoomMusicOptions
+	StaticText  ""
+	StaticText  "Supported Community MIDI Pack:", "brown"
+	StaticText  "Master Levels MIDI Pack", "brown"
+	StaticText  "Revolution! MIDI Pack", "brown"
+	StaticText  "Harmony MIDI Pack", "brown"
+	StaticText  "Plutonia MIDI Pack", "brown"
+	StaticText  "No Rest For The Living MIDI Pack", "brown"
 }
 
 AddOptionMenu OptionsMenu

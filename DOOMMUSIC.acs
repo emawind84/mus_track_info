@@ -71,12 +71,12 @@ str mti_DoomMusicNames[60][2] = {
 	{"",""},
 };
 
-script "mti_PrintLevelInfo" ENTER
-{
-	str mapname = StrParam(n:PRINTNAME_LEVEL);
-	Log(s:"LEVEL: ", d:find_level_num());
-	Print(s:"MAPNAME: ", s:mapname);
-}
+// script "mti_PrintLevelInfo" ENTER
+// {
+// 	str mapname = StrParam(n:PRINTNAME_LEVEL);
+// 	Log(s:"LEVEL: ", d:find_level_num());
+// 	Log(s:"MAPNAME: ", s:mapname);
+// }
 
 script "mti_DoomPrintTrackName" ENTER
 {

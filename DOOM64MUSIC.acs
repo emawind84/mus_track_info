@@ -1,0 +1,86 @@
+#library "DOOM64MUSIC"
+#include "zcommon.acs"
+#include "muscommon.acs"
+
+str mti_Doom64MusicNames[60][2] = {	
+
+  { "The Madness", "Aubrey Hodges" },
+  { "Warped Hive", "Aubrey Hodges" },
+  { "Tortured Transmission", "Aubrey Hodges" },
+  { "Spaces Between", "Aubrey Hodges" },
+  { "Hellistatic", "Aubrey Hodges" },
+  { "Bleep Spawn", "Aubrey Hodges" },
+  { "Relentless Coil", "Aubrey Hodges" },
+  { "The Damned", "Aubrey Hodges" },
+  { "Other Side Of Madness", "Aubrey Hodges" },
+  { "Dark Echo", "Aubrey Hodges" },  // 10
+  
+  { "Aspects Of The Vile", "Aubrey Hodges" },
+  { "Lamentation Of The Forgotten", "Aubrey Hodges" },
+  { "Voices In The Blood", "Aubrey Hodges" },
+  { "Chrystalline Chaos", "Aubrey Hodges" },
+  { "Wait For It", "Aubrey Hodges" },
+  { "Warped Hive", "Aubrey Hodges" },
+  { "Blood Red Shadows", "Aubrey Hodges" },
+  { "Warped", "Aubrey Hodges" },
+  { "Collision Course", "Aubrey Hodges" },
+  { "The Rotted Foul", "Aubrey Hodges" },  // 20
+ 
+  { "Perfect Hate", "Aubrey Hodges" },
+  { "Hellistatic", "Aubrey Hodges" },
+  { "Relentless Coil", "Aubrey Hodges" },
+  { "Dark Echo", "Aubrey Hodges" },
+  { "Warped Hive", "Aubrey Hodges" },
+  { "Dark Echo", "Aubrey Hodges" },
+  { "Warped", "Aubrey Hodges" },
+  { "Aspects Of The Vile", "Aubrey Hodges" },
+  { "Hellistatic", "Aubrey Hodges" },
+  { "Lamentation Of The Forgotten", "Aubrey Hodges" },
+  
+  { "Blood Red Shadows", "Aubrey Hodges" },
+  { "Spaces Between", "Aubrey Hodges" },
+  { "Doom 64 Main Theme", "Aubrey Hodges" },  // 33 Titlemap
+  { "Doom 64 Main Theme", "Aubrey Hodges" },  // 34 Testfacility
+  
+  // retribution maps
+  { "Aspects Of The Vile", "Aubrey Hodges" },
+  { "Perfect Hate", "Aubrey Hodges" },
+  {},{},{},{},{},
+  { "Tortured Transmission", "Aubrey Hodges" },
+  { "Lamentation Of The Forgotten", "Aubrey Hodges" },
+  {},  // 44
+  
+  // ABSOLUTION maps
+  { "Collision Course", "Aubrey Hodges" },
+  { "Bleep Spawn", "Aubrey Hodges" },
+  { "Relentless Coil", "Aubrey Hodges" },
+  { "Other Side Of Madness", "Aubrey Hodges" },
+  { "The Damned", "Aubrey Hodges" },
+  { "Warped", "Aubrey Hodges" },  // 50
+  
+  // outcast maps
+  { "Tortured Transmission", "Aubrey Hodges" },
+  { "Wait For It", "Aubrey Hodges" },
+  { "Bleep Spawn", "Aubrey Hodges" },
+  { "Warped Hive", "Aubrey Hodges" },
+  { "Spaces Between", "Aubrey Hodges" },
+  { "Relentless Coil", "Aubrey Hodges" },
+  { "Dark Echo", "Aubrey Hodges" },
+  { "Other Side Of Madness", "Aubrey Hodges" },
+  { "Blood Red Shadows", "Aubrey Hodges" },
+  { "Dark Echo", "Aubrey Hodges" },  // 60
+  
+  // REDEMPTION maps
+};
+
+script "mti_Doom64PrintTrackName" ENTER
+{
+	if (CheckInventory("mti_isdoom64"))
+	{
+		int levelnum = find_level_num();
+		if (levelnum > 0)
+		{
+			print_track(mti_Doom64MusicNames[levelnum-1][0], mti_Doom64MusicNames[levelnum-1][1]);
+		}
+	}
+}

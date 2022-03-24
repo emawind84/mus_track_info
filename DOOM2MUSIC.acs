@@ -2,7 +2,7 @@
 #include "zcommon.acs"
 #include "muscommon.acs"
 
-str mti_Doom2MusicNames[60][2] = {	
+str mti_Doom2MusicNames[69][2] = {	
   // doom 2
   { "Running From Evil", "Robert Prince" },
   { "The Healer Stalks", "Robert Prince" },
@@ -64,9 +64,19 @@ str mti_Doom2MusicNames[60][2] = {
   { "Message for the Archvile", "Robert Prince" },
   { "Countdown to Death", "Robert Prince" },  // 60
   
+  // NRFTL
+  { "Message for the Archvile", "Robert Prince" },
+  { "The Dave D. Taylor Blues", "Robert Prince" },
+  { "DOOM", "Robert Prince" },
+  { "Shawn's got the Shotgun", "Robert Prince" },
+  { "Into Sandy's City", "Robert Prince" },
+  { "In the Dark", "Robert Prince" },
+  { "Into Sandy's City", "Robert Prince" },
+  { "Shawn's got the Shotgun", "Robert Prince" },
+  { "The Dave D. Taylor Blues", "Robert Prince" },
 };
 
-str mti_MLMidiPackMusicNames[60][2] = 
+str mti_MLMidiPackMusicNames[69][2] = 
 {
   // doom 2 master levels midi pack
   { "Are We Really Doing This", "Peter Lawrence (MegaSphere)" },
@@ -129,48 +139,20 @@ str mti_MLMidiPackMusicNames[60][2] =
   { "Erecting The Black Tower", "Peter Lawrence (MegaSphere)" },
   { "Grinding Teeth", "Peter Lawrence (MegaSphere)" },
   { "The Tit", "Peter Lawrence (MegaSphere)" },  // 60
+  
+  // NRFTL
+  { "Grinding Teeth", "Peter Lawrence (MegaSphere)" },
+  { "Waltz into Mancubus Fireballs", "Peter Lawrence (MegaSphere)" },
+  { "Fist Urethra", "Peter Lawrence (MegaSphere), j0e" },
+  { "Death by Enriched Bagel", "Xulgonoth" },
+  { "Ejipt", "Peter Lawrence (MegaSphere)" },
+  { "Shepards Tone", "Peter Lawrence (MegaSphere)" },
+  { "Ejipt", "Peter Lawrence (MegaSphere)" },
+  { "Death by Enriched Bagel", "Xulgonoth" },
+  { "Waltz into Mancubus Fireballs", "Peter Lawrence (MegaSphere)" },
 };
 
-// no rest for the living
-str mti_NRFTLMusicNames[9][2] = {
-  { "Message for the Archvile", "Robert Prince" },
-  { "The Dave D. Taylor Blues", "Robert Prince" },
-  { "DOOM", "Robert Prince" },
-  { "Shawn's got the Shotgun", "Robert Prince" },
-  { "Into Sandy's City", "Robert Prince" },
-  { "In the Dark", "Robert Prince" },
-  { "Into Sandy's City", "Robert Prince" },
-  { "Shawn's got the Shotgun", "Robert Prince" },
-  { "The Dave D. Taylor Blues", "Robert Prince" },
-};
-
-// no rest for the living comm. midi pack
-str mti_NRFTLMidiPackMusicNames[9][2] = {
-  { "Homesick", "decino" },
-  { "Archaic Doctrine", "TrialD" },
-  { "Dry Gulch", "JD Herrera" },
-  { "The Last Gatling Gun Rodeo", "Cammy" },
-  { "Unbearable Torture", "Sego" },
-  { "Staccato Slaughter", "Peter Lawrence (MegaSphere)" },
-  { "Monsieur Gourmet", "JD Herrera" },
-  { "Darkness Unfolds", "Bloo" },
-  { "Mountain Slayers of the Eagle's Thunder", "Rogue Akai, Sumo" },
-};
-
-// no rest for the living - tvr midi pack
-str mti_NRFTL_TVR_MusicNames[9][2] = {
-  { "Black Colossus", "Hellish Godzilla & Jimmy" },
-  { "Hangar 7", "Jimmy" },
-  { "Last Resort", "Jimmy" },
-  { "Forgotten Valley", "Icytux" },
-  { "Phalarope Shuffle", "yakfak" },
-  { "Wasted", "Doomkid" },
-  { "Phalarope Shuffle", "yakfak" },
-  { "Forgotten Valley", "Icytux" },
-  { "Hangar 7", "Jimmy" },
-};
-
-str mti_TVRMidiPackMusicNames[60][2] = {
+str mti_TVRMidiPackMusicNames[69][2] = {
   { "Freighthoppers", "Jimmy" },
   { "Trash", "Alfonzo" },
   { "Bystreet", "Akse & Jimmy" },
@@ -233,7 +215,29 @@ str mti_TVRMidiPackMusicNames[60][2] = {
   { "Black Colossus", "Hellish Godzilla & Jimmy" },
   { "Unearth", "Alfonzo" },  // 60
   
-  
+  // NRFTL
+  { "Black Colossus", "Hellish Godzilla & Jimmy" },
+  { "Hangar 7", "Jimmy" },
+  { "Last Resort", "Jimmy" },
+  { "Forgotten Valley", "Icytux" },
+  { "Phalarope Shuffle", "yakfak" },
+  { "Wasted", "Doomkid" },
+  { "Phalarope Shuffle", "yakfak" },
+  { "Forgotten Valley", "Icytux" },
+  { "Hangar 7", "Jimmy" },
+};
+
+// no rest for the living comm. midi pack
+str mti_NRFTLMidiPackMusicNames[9][2] = {
+  { "Homesick", "decino" },
+  { "Archaic Doctrine", "TrialD" },
+  { "Dry Gulch", "JD Herrera" },
+  { "The Last Gatling Gun Rodeo", "Cammy" },
+  { "Unbearable Torture", "Sego" },
+  { "Staccato Slaughter", "Peter Lawrence (MegaSphere)" },
+  { "Monsieur Gourmet", "JD Herrera" },
+  { "Darkness Unfolds", "Bloo" },
+  { "Mountain Slayers of the Eagle's Thunder", "Rogue Akai, Sumo" },
 };
 
 script "mti_Doom2PrintTrackName" ENTER
@@ -243,26 +247,15 @@ script "mti_Doom2PrintTrackName" ENTER
 		int doom2music = GetCVar("mti_doom2_music");
 		int levelnum = find_level_num();
 		
-		if (levelnum >= 61 )  // NRFTL
+		if (levelnum >= 61 && CheckInventory("mti_isnrftlmidi")) // NRFTL Midi Pack
 		{
 			levelnum -= 60;
-			if (CheckInventory("mti_isnrftlmidi"))
-			{
-				print_track(mti_NRFTLMidiPackMusicNames[levelnum-1][0], mti_NRFTLMidiPackMusicNames[levelnum-1][1]);
-			}
-			else if (CheckInventory("mti_istvrmidipack"))
-			{
-				print_track(mti_NRFTL_TVR_MusicNames[levelnum-1][0], mti_NRFTL_TVR_MusicNames[levelnum-1][1]);
-			}
-			else
-			{
-				print_track(mti_NRFTLMusicNames[levelnum-1][0], mti_NRFTLMusicNames[levelnum-1][1]);
-			}
+			print_track(mti_NRFTLMidiPackMusicNames[levelnum-1][0], mti_NRFTLMidiPackMusicNames[levelnum-1][1]);
 		}
 		
 		else if (levelnum > 0)
 		{
-			if (CheckInventory("mti_istvrmidipack"))  // Revolution Midi Pack
+			if (doom2music == 2)  // Revolution Midi Pack
 			{
 				print_track(mti_TVRMidiPackMusicNames[levelnum-1][0], mti_TVRMidiPackMusicNames[levelnum-1][1]);
 			}

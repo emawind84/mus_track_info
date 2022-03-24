@@ -1,6 +1,11 @@
 function void print_track(str music, str artist)
 {
-	HudMessage(s:"\caMUSIC: \cj\"",s:music, s:"\" \cbby ", s:artist; HUDMSG_TYPEON | HUDMSG_LOG, 1, CR_UNTRANSLATED, 0.1, 0.1, 2.0, 0.03, 2.0);
+	if (music != "")
+	{
+		SetFont("SMALLFONT");
+		SetHudSize(0, 0, FALSE);
+		HudMessage(s:"\caMUSIC: \cj\"",s:music, s:"\" \cbby ", s:artist; HUDMSG_TYPEON | HUDMSG_LOG, 1, CR_UNTRANSLATED, 0.05, 0.05, 2.0, 0.03, 2.0);
+	}
 }
 
 function int find_level_num(void)
