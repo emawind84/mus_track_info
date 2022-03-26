@@ -71,6 +71,11 @@ str mti_Doom64MusicNames[60][2] = {
   { "Dark Echo", "Aubrey Hodges" },  // 60
   
   // REDEMPTION maps
+  { "Tortured Transmission", "Aubrey Hodges" },
+  { "Warped Hive", "Aubrey Hodges" },
+  { "The Damned", "Aubrey Hodges" },
+  { "Bleep Spawn", "Aubrey Hodges" },
+  { "Relentless Coil", "Aubrey Hodges" },
 };
 
 script "mti_Doom64PrintTrackName" ENTER

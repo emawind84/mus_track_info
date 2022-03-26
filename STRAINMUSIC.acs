@@ -1,0 +1,54 @@
+#library "STRAINMUSIC"
+#include "zcommon.acs"
+#include "muscommon.acs"
+
+str mti_StrainMusicNames[32][2] = {	
+
+  { "TechnoDoom", "Mark Klem" },
+  { "The Hell 'Prince' Medley", "David Shaw" },
+  { "Inner Turmoil", "David Shaw" },
+  { "unknown", "Jon Landis" },
+  { "State of Mind", "Mark Klem" },
+  { "Simple Solutions", "Mark Klem" },
+  { "Suphilixious", "David Shaw" },
+  { "Danger", "Mark Klem" },
+  { "Beneath", "Mark Klem" },
+  { "Thin Ice", "David Shaw" },  // 10
+
+  { "Treasures in the Dark", "Mark Klem" },
+  { "Scent of Hell", "David Shaw" },
+  { "Land of Able", "Mark Klem" },
+  { "unknown", "Jon Landis" },
+  { "Danger", "Mark Klem" },
+  { "Novaroid", "Mark Klem" },
+  { "unknown", "Jon Landis" },
+  { "Simple Solutions", "Mark Klem" },
+  { "unknown", "Jon Landis" },
+  { "Phenomenon", "Mark Klem" },  // 20
+
+  { "Continue On", "David Shaw" },
+  { "Thin Ice", "David Shaw" },
+  { "Treasures in the Dark", "Mark Klem" },
+  { "TechnoDoom", "Mark Klem" },
+  { "Beneath", "Mark Klem" },
+  { "In the Heart of Darkness", "David Shaw" },
+  { "unknown", "Jon Landis" },
+  { "unknown", "Jon Landis" },
+  { "State of Mind", "Mark Klem" },
+  { "unknown", "Jon Landis" },
+
+  { "Scent of Hell", "David Shaw" },
+  { "The Blue Danube", "Johann Strauss II, arranged by Jon Landis" },
+};
+
+script "mti_StrainPrintTrackName" ENTER
+{
+  if (CheckInventory("mti_isstrain"))
+  {
+    int levelnum = find_level_num();
+    if (levelnum > 0)
+    {
+      print_track(mti_StrainMusicNames[levelnum-1][0], mti_StrainMusicNames[levelnum-1][1]);
+    }
+  }
+}

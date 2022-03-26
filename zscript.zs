@@ -9,6 +9,7 @@ class mti_MusicInfoHandler: EventHandler
         // the order is important
         if (isPlutonia()) player.GiveInventory("mti_isplutonia", 1);
         else if (isTnt()) player.GiveInventory("mti_istnt", 1);
+        else if (isHacx()) player.GiveInventory("mti_ishacx", 1);
         else if (isChex3()) player.GiveInventory("mti_ischex3", 1);
         else if (isStrife()) player.GiveInventory("mti_isstrife", 1);
         else if (isHexendd()) player.GiveInventory("mti_ishexendd", 1);
@@ -16,6 +17,7 @@ class mti_MusicInfoHandler: EventHandler
         else if (isHeretic()) player.GiveInventory("mti_isheretic", 1);
         else if (isHarmony()) player.GiveInventory("mti_isharmony", 1);
         else if (isDoom64()) player.GiveInventory("mti_isdoom64", 1);
+        else if (isStrain()) player.GiveInventory("mti_isstrain", 1);
         else if (isFinalDoom()) player.GiveInventory("mti_isfinaldoom", 1);
         else if (isDoom2()) player.GiveInventory("mti_isdoom2", 1);
         
@@ -168,6 +170,28 @@ class mti_MusicInfoHandler: EventHandler
         &&  (Wads.CheckNumForName("WADINFO", 0) != -1)
         &&  (Wads.CheckNumForName("MAPINFO", 0) != -1)
         &&  (Wads.CheckNumForName("EMAPINFO", 0) != -1)
+        ){
+            return true;
+        }
+        return false;
+    }
+
+    static bool isHacx()
+    {
+        // "MAP01", "HACX-R"
+        // "MAP01", "HACX-E"
+        if ((Wads.CheckNumForName("MAP01", 0) != -1)
+        &&  (Wads.CheckNumForName("HACX-R", 0) != -1 || Wads.CheckNumForName("HACX-E", 0) != -1)
+        ){
+            return true;
+        }
+        return false;
+    }
+
+    static bool isStrain()
+    {
+        if ((Wads.CheckNumForName("ADA_A", Wads.ns_flats) != -1)
+        &&  (Wads.CheckNumForName("ALIEN_01", Wads.ns_flats) != -1)
         ){
             return true;
         }

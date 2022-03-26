@@ -16,3 +16,5 @@ Actor mti_isnrftlmidi : mti_isfinaldoom {}
 Actor mti_isstrife : mti_isfinaldoom {}
 Actor mti_isdoom64 : mti_isfinaldoom {}
 Actor mti_istvrmidipack : mti_isfinaldoom {}
+Actor mti_ishacx : mti_isfinaldoom {}
+Actor mti_isstrain : mti_isfinaldoom {}

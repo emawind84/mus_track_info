@@ -1,0 +1,40 @@
+#library "HACXMUSIC"
+#include "zcommon.acs"
+#include "muscommon.acs"
+
+str mti_HacxMusicNames[21][2] = {
+
+    { "GenEmp Corp", "Ellsworth Hall / Jim Lynch" },
+    { "Tunnel Town", "Jim Lynch" },
+    { "Lava Annex", "Jim Lynch" },
+    { "Alcatraz", "Jim Lynch" },
+    { "Cyber Circus", "Jim Lynch" },
+    { "Digi-Ota", "Jim Lynch" },
+    { "The Great Wall", "Jim Lynch" },
+    { "Garden of Delight", "Jim Lynch" },
+    { "Hidden Fortress", "Jim Lynch" },
+    { "Anarchist Dream", "Ellsworth Hall / Jim Lynch" },
+    { "Notus Us!", "Jim Lynch" },
+    { "Protean Cybex", "Ellsworth Hall / Jim Lynch / Mark Van Natta" },
+    { "The Sewers", "Ellsworth Hall / Jim Lynch" },
+    { "'Trode Wars", "Ellsworth Hall / Jim Lynch" },
+    { "Twilight of EnKs", "Jim Lynch" },
+    { "Gothik Gauntlet", "Ellsworth Hall" },
+    { "River of Blood", "Ellsworth Hall / Jim Lynch" },
+    { "Bizarro", "Ellsworth Hall / Jim Lynch" },
+    { "The War Rooms", "Jim Lynch" },
+    { "Intruder Alert!", "Jim Lynch" },
+    { "Dessicant Room", "Jim Lynch" },
+};
+
+script "mti_HacxPrintTrackName" ENTER
+{
+    if (CheckInventory("mti_ishacx"))
+    {
+        int levelnum = GetLevelInfo(LEVELINFO_LEVELNUM);
+        if (levelnum > 0)
+        {
+            print_track(mti_HacxMusicNames[levelnum-1][0], mti_HacxMusicNames[levelnum-1][1]);
+        }
+    }
+}
