@@ -43,19 +43,24 @@ OptionMenu mti_MusicLabelOptions
     Option      "Doom 2 Music", mti_doom2_music, mti_Doom2MusicOptions
     Option      "Strife Music", mti_strife_music, mti_DoomMusicOptions
     Option      "Sigil Music", mti_sigil_music, mti_SigilMusicOptions
-    Option      "Plutonia Music", mti_plutonia_music, mti_PlutoniaMusicOptions
+    Option      "The Plutonia Experiment Music", mti_plutonia_music, mti_PlutoniaMusicOptions
     Option      "TNT: Evilution Music", mti_tnt_music, mti_DoomMusicOptions
     Option      "Harmony Music", mti_harmony_music, mti_HarmonyMusicOptions
     Option      "Hexen Music", mti_hexen_music, mti_HexenMusicOptions
     Option      "Heretic Music", mti_heretic_music, mti_DoomMusicOptions
     Option      "Chex 3 Music", mti_chex3_music, mti_DoomMusicOptions
     StaticText  ""
-    StaticText  "Supported Community MIDI Pack:", "brown"
+    StaticText  "Supported Community MIDI Packs:", "brown"
     StaticText  "Master Levels MIDI Pack", "brown"
     StaticText  "Revolution! MIDI Pack", "brown"
     StaticText  "Harmony MIDI Pack", "brown"
     StaticText  "Plutonia MIDI Pack", "brown"
     StaticText  "No Rest For The Living MIDI Pack", "brown"
+    StaticText  ""
+    StaticText  "Supported games and TC:", "brown"
+    StaticText  "Doom, Doom II, TNT: Evilution, The Plutonia Experiment", "brown"
+    StaticText  "Hexen, Heretic, Strife, Chex 3, Harmony", "brown"
+    StaticText  "Doom 64: Retribution, Hacx, Strain", "brown"
 }
 
 AddOptionMenu OptionsMenu
