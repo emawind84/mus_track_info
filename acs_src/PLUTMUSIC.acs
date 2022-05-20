@@ -1,7 +1,3 @@
-#library "PLUTMUSIC"
-#include "zcommon.acs"
-#include "muscommon.acs"
-
 str mti_PlutoniaMusicNames[32][2] = {
   { "The Imp's Song", "Bobby Prince" },
   { "Dark Halls", "Bobby Prince" },

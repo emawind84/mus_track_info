@@ -1,7 +1,3 @@
-#library "HACXMUSIC"
-#include "zcommon.acs"
-#include "muscommon.acs"
-
 str mti_HacxMusicNames[21][2] = {
 
     { "GenEmp Corp", "Ellsworth Hall / Jim Lynch" },

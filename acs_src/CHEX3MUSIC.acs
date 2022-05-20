@@ -1,7 +1,3 @@
-#library "CHEX3MUSIC"
-#include "zcommon.acs"
-#include "muscommon.acs"
-
 str mti_Chex3MusicNames[15][2] = {
   { "Landing Zone", "Andrew Benon" },
   { "Storage Facility", "Andrew Benon" },

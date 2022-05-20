@@ -1,7 +1,3 @@
-#library "HARMMUSIC"
-#include "zcommon.acs"
-#include "muscommon.acs"
-
 str mti_HarmonyMidiPackMusicNames[11][2] = {
     { "Insurgence", "James Paddock (Jimmy)" },
     { "Desperate Intruder", "James Paddock (Jimmy)" },

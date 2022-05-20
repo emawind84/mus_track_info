@@ -1,8 +1,4 @@
-#library "DOOM64MUSIC"
-#include "zcommon.acs"
-#include "muscommon.acs"
-
-str mti_Doom64MusicNames[60][2] = {	
+str mti_Doom64MusicNames[65][2] = {	
 
   { "The Madness", "Aubrey Hodges" },
   { "Warped Hive", "Aubrey Hodges" },

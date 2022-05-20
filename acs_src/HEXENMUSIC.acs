@@ -1,7 +1,3 @@
-#library "HEXENMUSIC"
-#include "zcommon.acs"
-#include "muscommon.acs"
-
 str mti_HexenMusicNames[40][2] = {
     // hub 1
     { "Winnowing Hall", "Kevin Schilder" },

@@ -1,7 +1,3 @@
-#library "STRAINMUSIC"
-#include "zcommon.acs"
-#include "muscommon.acs"
-
 str mti_StrainMusicNames[32][2] = {	
 
   { "TechnoDoom", "Mark Klem" },

@@ -1,7 +1,3 @@
-#library "DOOMMUSIC"
-#include "zcommon.acs"
-#include "muscommon.acs"
-
 str mti_DoomMusicNames[60][2] = {
     // e1
     {"At Doom's Gate","Bobby Prince"},

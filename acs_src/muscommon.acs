@@ -2,9 +2,21 @@ function void print_track(str music, str artist)
 {
     if (music != "")
     {
-        SetFont("SMALLFONT");
-        SetHudSize(0, 0, FALSE);
-        HudMessage(s:"\caMUSIC: \cj\"",s:music, s:"\" \cbby ", s:artist; HUDMSG_TYPEON | HUDMSG_LOG, 1, CR_UNTRANSLATED, 0.05, 0.05, 2.0, 0.03, 2.0);
+        SetFont("SmallFont");
+        HudMessageBold(s:"~ Now Playing ~";
+        HUDMSG_FADEINOUT, 900, CR_DARKGREY, 1.5, 0.90, 2.8, 1 << 16, 0.2);
+        
+        SetFont("BigFont");
+        HudMessageBold(s:"\"",s:music,s:"\"";
+        HUDMSG_FADEINOUT, 902, CR_WHITE, 1.5, 0.94, 2.8, 1 << 16, 0.2);
+        
+        SetFont("SmallFont");
+        HudMessageBold(s:"by ",s:artist;
+        HUDMSG_FADEINOUT, 903, CR_WHITE, 1.5, 0.97, 2.8, 1 << 16, 0.2);
+    
+        //SetFont("SMALLFONT");
+        //SetHudSize(0, 0, FALSE);
+        //HudMessage(s:"\caMUSIC: \cj\"",s:music, s:"\" \cbby ", s:artist; HUDMSG_TYPEON | HUDMSG_LOG, 1, CR_UNTRANSLATED, 0.05, 0.05, 2.0, 0.03, 2.0);
     }
 }
 

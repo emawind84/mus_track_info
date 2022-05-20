@@ -1,7 +1,3 @@
-#library "HEXDDMUSIC"
-#include "zcommon.acs"
-#include "muscommon.acs"
-
 str mti_HexddMusicNames[60][2] = {
     // hub 1
     { "Winnowing Hall", "Kevin Schilder" },

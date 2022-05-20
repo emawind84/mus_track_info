@@ -1,0 +1,18 @@
+#library "mustrackinfo"
+#include "zcommon.acs"
+
+#include "muscommon.acs"
+
+#include "DOOMMUSIC.acs"
+#include "DOOM2MUSIC.acs"
+#include "DOOM64MUSIC.acs"
+#include "CHEX3MUSIC.acs"
+#include "HACXMUSIC.acs"
+#include "HARMMUSIC.acs"
+#include "HERETICMUSIC.acs"
+#include "HEXDDMUSIC.acs"
+#include "HEXENMUSIC.acs"
+#include "PLUTMUSIC.acs"
+#include "STRAINMUSIC.acs"
+#include "STRIFEMUSIC.acs"
+#include "TNTMUSIC.acs"

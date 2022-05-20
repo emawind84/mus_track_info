@@ -1,7 +1,3 @@
-#library "TNTMUSIC"
-#include "zcommon.acs"
-#include "muscommon.acs"
-
 str mti_TntMusicNames[32][2] = {
   { "Sadistic", "L.A. Sieben" },
   { "Smells Like Burning Corpse	", "L.A. Sieben" },

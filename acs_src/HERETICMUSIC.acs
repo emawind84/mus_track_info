@@ -1,7 +1,3 @@
-#library "HERETICMUSIC"
-#include "zcommon.acs"
-#include "muscommon.acs"
-
 str mti_HereticMusicNames[48][2] = {
     
     { "Dark", "Kevin Schilder" },

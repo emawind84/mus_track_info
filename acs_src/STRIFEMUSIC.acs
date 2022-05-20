@@ -1,7 +1,3 @@
-#library "STRIFEMUSIC"
-#include "zcommon.acs"
-#include "muscommon.acs"
-
 str mti_StrifeMusicNames[31][2] = {	
 
   { "Action", "Morey Goldstein" },

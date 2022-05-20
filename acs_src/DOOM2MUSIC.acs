@@ -1,7 +1,3 @@
-#library "DOOM2MUSIC"
-#include "zcommon.acs"
-#include "muscommon.acs"
-
 str mti_Doom2MusicNames[69][2] = {	
   // doom 2
   { "Running From Evil", "Robert Prince" },
